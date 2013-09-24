@@ -1,0 +1,38 @@
+{
+  "name": "flocon",
+  "version": "0.0.1",
+  "author": "Yosee <opensource@yosee.com>",
+  "description": "64-bits Unique ID generator for Node.js written in C++",
+  "keywords": [ "unique", "id", "uuid", "uid", "shard", "database", "db", "snowflake" ],
+  "contributors": [
+    {
+      "name": "Antoine Marcadet",
+      "email": "antoine.marcadet@gmail.com"
+    },
+    {
+      "name": "Julien Seren-Rosso",
+      "email": "j.serenrosso@gmail.com"
+    }
+  ],
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yosee/flocon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Yosee/flocon/issues"
+  },
+
+  "config": {
+    "native": false
+  },
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "scripts": {
+    "install" : "(node-gyp rebuild 2> builderror.log) || (exit 0)"
+  }
+
+  "license": "MIT"
+}
