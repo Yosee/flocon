@@ -15,6 +15,11 @@
     }
   ],
 
+  "devDependencies": {
+    "mocha": "~1.12.0",
+    "should": "~1.2.2"
+  },
+
   "repository": {
     "type": "git",
     "url": "https://github.com/Yosee/flocon.git"
@@ -31,7 +36,8 @@
     "node": ">=0.10"
   },
   "scripts": {
-    "install" : "(node-gyp rebuild 2> builderror.log) || (exit 0)"
+    "install": "(node-gyp rebuild 2> builderror.log) || (exit 0)",
+    "test": "make test"
   },
 
   "license": "MIT"
