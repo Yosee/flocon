@@ -1,4 +1,7 @@
-#define BUILDING_NODE_EXTENSION
+#ifndef BUILDING_NODE_EXTENSION
+  #define BUILDING_NODE_EXTENSION
+#endif // BUILDING_NODE_EXTENSION
+
 #include <node.h>
 #include "flocon.h"
 
