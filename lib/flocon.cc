@@ -58,8 +58,21 @@ Handle<Value> Flocon::Snow(const Arguments& args) {
   chrono::system_clock::time_point now = chrono::system_clock::now();
   auto diff = now - obj->_epoch;
   auto ms = chrono::duration_cast<chrono::milliseconds>(diff);
-
   uint64_t time = ms.count();
+
+  if (obj->_count > 8191) {
+    chrono::system_clock::time_point now_loop;
+    uint64_t time_loop;
+
+    while (true) {
+      now_loop = chrono::system_clock::now();
+      auto diff_loop = now_loop - obj->_epoch;
+      auto ms_loop = chrono::duration_cast<chrono::milliseconds>(diff_loop);
+      time_loop = ms_loop.count();
+
+      if (time_loop > obj->_current) break;
+    }
+  }
 
   uint64_t pid = (uint64_t)getpid();
   pid = pid % 1024;
