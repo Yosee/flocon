@@ -1,7 +1,18 @@
-## Unik
+# Benchmark
+
+All benchmark have been made on the same machine and in the same conditions (meaning same applications running on the machine).
+
+Configuration:
+- Processor: 1.7 GHz Intel Core i7
+- Memory: 8 Go 1600 MHz DDR3
+- OS: OS X 10.8.5
+- Node: 0.10.18
+
+
+## [Unik](https://github.com/ricardobeat/unik)
 ```
-antoine: ~/Developer/Node/unik/test                                      [git:master]
-→ node sharding.js
+antoine: ~/Developer/Node/unik/test
+$ node sharding.js
 Burst size 60
 Starting 4 workers...
 2481300 ids, 496260 ids/sec, 68 MB, 4 workers
@@ -49,14 +60,15 @@ Starting 4 workers...
 98567880 ids, 534168 ids/sec, 116 MB, 4 workers
 101295720 ids, 545568 ids/sec, 116 MB, 4 workers
 ```
---> 90% proc
+
+Processor usage: 90%. Generate approximately 500,000 ids/sec.
 
 
 
-## Long
+## [Long](https://github.com/dcodeIO/Long.js)
 ```
-antoine: ~/Developer/Yosee/GitHub/flocon/bench    +[git:master]
-→ node sharding.js
+antoine: ~/Developer/Yosee/GitHub/flocon/bench
+$ node sharding.js
 Burst size 60
 Starting 4 workers...
 1989900 ids, 397980 ids/sec, 205 MB, 4 workers
@@ -115,14 +127,15 @@ Starting 4 workers...
 99566640 ids, 375552 ids/sec, 205 MB, 4 workers
 101485920 ids, 383856 ids/sec, 206 MB, 4 workers
 ```
---> 90% proc
+
+Processor usage: 90%. Generate approximately 360,000 ids/sec.
 
 
 
-## Bigint
+## [Bigint](https://github.com/substack/node-bigint)
 ```
-antoine: ~/Developer/Yosee/GitHub/flocon/bench                  +[git:master]
-→ node sharding.js
+antoine: ~/Developer/Yosee/GitHub/flocon/bench
+$ node sharding.js
 Burst size 60
 Starting 4 workers...
 522480 ids, 104496 ids/sec, 220 MB, 4 workers
@@ -133,14 +146,15 @@ Starting 4 workers...
 3120900 ids, 96372 ids/sec, 224 MB, 4 workers
 3636960 ids, 103212 ids/sec, 224 MB, 4 workers
 ```
---> 90% proc
+
+Processor usage: 90%. Generate approximately 100,000 ids/sec.
 
 
 
-## Bignum
+## [Bignum](https://github.com/justmoon/node-bignum)
 ```
-antoine: ~/Developer/Yosee/GitHub/flocon/bench                  +[git:master]
-→ node sharding.js
+antoine: ~/Developer/Yosee/GitHub/flocon/bench
+$ node sharding.js
 Burst size 60
 Starting 4 workers...
 499320 ids, 99864 ids/sec, 223 MB, 4 workers
@@ -153,14 +167,15 @@ Starting 4 workers...
 3926880 ids, 92220 ids/sec, 224 MB, 4 workers
 4403580 ids, 95340 ids/sec, 224 MB, 4 workers
 ```
---> 90% proc
+
+Processor usage: 90%. Generate less than 100,000 ids/sec.
 
 
 
-## C++
+## [C++ / flocon](https://github.com/Yosee/flocon)
 ```
-antoine: ~/Developer/Yosee/GitHub/flocon/bench    +[git:master]
-→ node sharding.js
+antoine: ~/Developer/Yosee/GitHub/flocon/bench
+$ node sharding.js
 Burst size 60
 Starting 4 workers...
 5471340 ids, 1094268 ids/sec, 68 MB, 4 workers
@@ -183,4 +198,5 @@ Starting 4 workers...
 99621180 ids, 1151052 ids/sec, 68 MB, 4 workers
 105160500 ids, 1107864 ids/sec, 68 MB, 4 workers
 ```
---> 50% proc
+
+Processor usage: 50%. Generate more than 1,000,000 ids/sec.
