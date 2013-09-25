@@ -1,7 +1,7 @@
 var cluster = require('cluster')
   , ids     = []
   , worker  = cluster.worker
-  , flocon    = require('../lib');
+  , flocon  = require('./flocon-cpp');
 
 var burst = +process.argv[3] || 60;
 

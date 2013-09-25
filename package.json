@@ -28,7 +28,9 @@
   "devDependencies": {
     "mocha": "~1.12.0",
     "should": "~1.2.2",
-    "long": "~1.1.2"
+    "long": "~1.1.2",
+    "bignum": "~0.6.2",
+    "bigint": "~0.4.2"
   },
   "repository": {
     "type": "git",
