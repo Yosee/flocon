@@ -1,5 +1,6 @@
 var should = require('should');
 var flocon = require('../lib');
+var Long = require('long');
 
 describe('Flocon', function() {
 
@@ -16,6 +17,13 @@ describe('Flocon', function() {
     var id2 = flocon.snow();
 
     id1.should.not.be.equal(id2);
+    done();
+  });
+
+  it('Should be a long', function(done) {
+    var id = flocon.snow();
+    var val = new Long.fromString(id);
+    val.toString().should.be.equal(id);
     done();
   });
 
