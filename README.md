@@ -29,7 +29,6 @@ npm install flocon --save
 
 ```javascript
 var flocon = require('flocon');
-
 var id = flocon.snow();
 ```
 
@@ -67,13 +66,11 @@ Returns a [Snowflake](https://github.com/twitter/snowflake/)-inspired 64-bit IDs
 </table>
 `.snow()` can generate a total of `18,446,744,073,709,551,616` values.
 
-## Sharding
-
 
 
 ## Tests
 
-
+`npm test` or check inside [bench](https://github.com/Yosee/flocon/tree/master/bench) for more tests.
 
 ## References
 
