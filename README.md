@@ -17,6 +17,8 @@ Despite, if you want to use and contribute to this module, your help is welcome!
 
 This module requires OS X 10.7 (or later) and Xcode 4.5 (or later) to be built.
 
+Linux support is plan to be added in a near future.
+
 
 ## Installation
 
