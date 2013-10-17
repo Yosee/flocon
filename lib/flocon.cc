@@ -82,7 +82,7 @@ Handle<Value> Flocon::Snow(const Arguments& args) {
     obj->_count = 0;
   }
 
-  uint64_t identifier = time << 23 | pid << 13 | (++obj->_count);
+  uint64_t identifier = time << 23 | pid << 13 | (obj->_count++);
 
   char buffer[21];
   snprintf(buffer, 21, "%llu", identifier);
