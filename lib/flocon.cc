@@ -44,7 +44,7 @@ Handle<Value> Flocon::New(const Arguments& args) {
   Flocon* obj = new Flocon();
   obj->_count = 0;
   obj->_current = 0;
-  obj->_epoch = chrono::system_clock::from_time_t(1356998400); // 1st january 2013
+  obj->_epoch = chrono::system_clock::from_time_t(1325376000); // January 1st, 2013
   obj->Wrap(args.This());
 
   return args.This();
