@@ -1,6 +1,6 @@
 {
   "name": "flocon",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Yosee <opensource@yosee.com>",
   "description": "64-bits Unique ID generator for Node.js written in C++",
   "keywords": [
