@@ -12,6 +12,9 @@
               '-stdlib=libc++'
             ]
           }
+        }],
+        ['OS=="linux"', {
+          'cflags': [ '-std=c++0x' ]
         }]
       ]
     }
