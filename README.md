@@ -1,4 +1,4 @@
-# flocon
+# flocon [![Build Status](https://travis-ci.org/Yosee/flocon.png?branch=master)](https://travis-ci.org/Yosee/flocon)
 
 64-bits unique ID generator for Node.js written in C++.
 
@@ -15,9 +15,7 @@ Despite, if you want to use and contribute to this module, your help is welcome!
 
 ## Requirements
 
-This module requires OS X 10.7 (or later) and Xcode 4.5 (or later) to be built.
-
-Linux support is plan to be added in a near future.
+This module requires [C++11](http://en.wikipedia.org/wiki/C++11) because we use [chrono](http://www.cplusplus.com/reference/chrono/) to work with timestamps.
 
 
 ## Installation
@@ -32,6 +30,7 @@ npm install flocon --save
 ```javascript
 var flocon = require('flocon');
 var id = flocon.snow();
+console.log(typeof id); // string
 ```
 
 ### flocon.snow()
@@ -47,7 +46,7 @@ Returns a [Snowflake](https://github.com/twitter/snowflake/)-inspired 64-bit IDs
 	<tr>
 		<td>Time (milliseconds)</td>
 		<td>41 bits</td>
-		<td>Time elapsed since epoch, hardcoded to January 1st, 2013.</td>
+		<td>Time elapsed since epoch, hardcoded to January 1st, 2012.</td>
 	</tr>
 	<tr>
 		<td>Process ID</td>
